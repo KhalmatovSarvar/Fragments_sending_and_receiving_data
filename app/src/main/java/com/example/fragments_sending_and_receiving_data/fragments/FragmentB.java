@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.fragments_sending_and_receiving_data.R;
+import com.example.fragments_sending_and_receiving_data.model.Member;
 
 public class FragmentB extends Fragment {
     private FragmentBListener listener;
@@ -57,7 +58,7 @@ public class FragmentB extends Fragment {
     listener = null;
     }
 
-public void updateText(String message){
-        editText.setText(message);
+public void updateText(Member member){
+        editText.setText(member.toString());
 }
 }

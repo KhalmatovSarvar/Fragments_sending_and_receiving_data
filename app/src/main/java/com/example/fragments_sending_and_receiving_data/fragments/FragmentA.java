@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.fragments_sending_and_receiving_data.R;
+import com.example.fragments_sending_and_receiving_data.model.Member;
 
 public class FragmentA extends Fragment {
     private FragmentAListener listener;
@@ -20,7 +21,7 @@ public class FragmentA extends Fragment {
     private Button button;
 
     public interface FragmentAListener{
-        void sendMessageToFragmentB(String tetx);
+        void sendMessageToFragmentB(Member member);
     }
 
     @Nullable
@@ -34,15 +35,15 @@ public class FragmentA extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String text = editText.getText().toString();
-                listener.sendMessageToFragmentB(text);
+                Member member = new Member("Sarvar",21,'M');
+                listener.sendMessageToFragmentB(member);
             }
         });
         return view;
     }
 
-    public void updateText(String message){
-        editText.setText(message);
+    public void updateText(Member member){
+        editText.setText(member.toString());
     }
 
     @Override

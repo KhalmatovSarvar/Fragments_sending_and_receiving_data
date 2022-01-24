@@ -16,7 +16,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="24sp"
-        android:text="Send to B"
+        android:text="Send the object"
         android:layout_gravity="center"/>
-    
+
 </LinearLayout>
